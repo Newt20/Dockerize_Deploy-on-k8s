@@ -1,49 +1,35 @@
+# Dockerize_Deploy-on-k8s
+
+## 📑 Table of Contents
+- [📖 Overview](#-overview)
+- [⚙️ Image Link](#-image-link)
+- [📸 Screenshots](#-screenshots)
 
 
-## Prerequisites
+---
 
-- Node Version 22
- 
+## 📖 Overview
 
-### 1. For Run This Applications
+This project is a Node.js Express application containerized with Docker and deployed on kubernetes installed in an AWS EC2 instance. The application image is hosted on Docker Hub and deployed to an AWS EC2 Ubuntu instance, demonstrating a production-like containerized deployment setup.
+---
+
+## ⚙️ Image Link
 ```bash
-# install packages
-npm install 
-
-# Testing The Applications
-npm check
-
-# For Run the application
-npm start
-```
+docker pull fatinw4/node-express-app:v1
+---
 
 
-### Deployment Process
-1. **Cleanup**: Removes existing process if running
-   ```bash
-   pm2 delete node-app || true
-   ```
+## 📸 Screenshots
+### 1. Application
+![access](Image/access.png)
 
-2. **Start Application**: Launches with absolute path
-   ```bash
-   pm2 start "./src/server.js" --name node-app
-   ```
+### 2. Docker Image
+![docker_imagePushed](Image/docker_imagePushed.png)
 
-3. **Save Process List**: Persists PM2 configuration
-   ```bash
-   pm2 save
-   ```
+### 3. EC2 Running
+![ec2_running](Image/ec2_running.png)
 
-### About The Applications
-1. **Route**: This Application has 2 route
-   ```bash
-   / # this will show a hello world page
-   ```
-      ```bash
-   /api # this will response a json
-   ```
+### 4. Pods Running
+![pods_running](Image/pods_running.png)
 
-2. **Default Port**: By Default this application will run on port 3000
-
-
-
+---
