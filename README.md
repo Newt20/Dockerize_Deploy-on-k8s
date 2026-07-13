@@ -16,8 +16,8 @@ This project is a Node.js Express application containerized with Docker and depl
 ## ⚙️ Image Link
 ```bash
 docker pull fatinw4/node-express-app:v1
+```
 ---
-
 
 ## 📸 Screenshots
 ### 1. Application
